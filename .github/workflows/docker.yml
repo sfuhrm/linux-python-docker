@@ -36,6 +36,30 @@ jobs:
           - from: ubuntu:lunar
             tag: ubuntu-lunar
             file: Dockerfile-debian
+          - from: fedora:36
+            tag: fedora-36
+            file: Dockerfile-redhat
+          - from: fedora:37
+            tag: fedora-37
+            file: Dockerfile-redhat
+          - from: fedora:38
+            tag: fedora-38
+            file: Dockerfile-redhat
+          - from: fedora:39
+            tag: fedora-39
+            file: Dockerfile-redhat
+          - from: oraclelinux:9
+            tag: oraclelinux-9
+            file: Dockerfile-redhat
+          - from: oraclelinux:8
+            tag: oraclelinux-8
+            file: Dockerfile-redhat
+          - from: oraclelinux:7
+            tag: oraclelinux-7
+            file: Dockerfile-redhat
+          - from: oraclelinux:6
+            tag: oraclelinux-6
+            file: Dockerfile-redhat
     runs-on: ubuntu-latest
     steps:
 
