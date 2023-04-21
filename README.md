@@ -40,7 +40,6 @@ For the valid tags, see below or at [Docker Hub](https://hub.docker.com/r/stepha
 | oraclelinux-9 |
 | oraclelinux-8 |
 | oraclelinux-7 |
-| oraclelinux-6 |
 
 ## License
 

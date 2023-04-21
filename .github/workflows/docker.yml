@@ -73,10 +73,6 @@ jobs:
             tag: oraclelinux-7
             file: Dockerfile-redhat
             python: python39
-          - from: oraclelinux:6
-            tag: oraclelinux-6
-            file: Dockerfile-redhat
-            python: python39
     runs-on: ubuntu-latest
     steps:
 
