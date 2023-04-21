@@ -1,6 +1,8 @@
 # Linux Python Docker Container
 
 [![Docker](https://github.com/sfuhrm/linux-python-docker/actions/workflows/docker.yml/badge.svg)](https://github.com/sfuhrm/linux-python-docker/actions/workflows/docker.yml)
+![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/stephanfuhrmannionos/linux-python-docker)
+![GitHub](https://img.shields.io/github/license/sfuhrm/linux-python-docker)
 
 Github actions build infrastructure to matrix-build
 several versions of Linux Distributions
