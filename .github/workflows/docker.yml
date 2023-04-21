@@ -11,13 +11,13 @@ jobs:
         include:
           - from: debian:buster
             tag: debian-buster
-            subdir: debian
+            file: Dockerfile-debian
           - from: debian:bullseye
             tag: debian-bullseye
-            subdir: debian
+            file: Dockerfile-debian
           - from: debian:bookworm
             tag: debian-bookworm
-            subdir: debian
+            file: Dockerfile-debian
     runs-on: ubuntu-latest
     steps:
 
@@ -34,7 +34,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v4
         with:
-          context: "{{defaultContext}}:${{ matrix.subdir }}"
+          file: "${{ matrix.file }}"
           push: true
           build-args: "FROM: ${{ matrix.from }}"
           tags: stephanfuhrmannionos/linux-python-docker:${{ matrix.tag }}
