@@ -26,24 +26,25 @@ For the valid tags, see below or at [Docker Hub](https://hub.docker.com/r/stepha
 
 ## Supported tags
 
-| Tag |
-|-----|
-| debian-stretch |
-| debian-buster |
-| debian-bullseye |
-| debian-bookworm |
-| ubuntu-bionic |
-| ubuntu-focal |
-| ubuntu-jammy |
-| ubuntu-kinetic |
-| ubuntu-lunar |
-| fedora-36 |
-| fedora-37 |
-| fedora-38 |
-| fedora-39 |
-| oraclelinux-9 |
-| oraclelinux-8 |
-| oraclelinux-7 |
+| Tag | Package | Version |
+|-----|---------|---------|
+| debian:bookworm | python3 | Python 3.11.2 |
+| debian:bullseye | python3 | Python 3.9.2 |
+| debian:buster | python3 | Python 3.7.3 |
+| debian:stretch | python3 | Python 3.5.3 |
+| fedora:36 | python | Python 3.10.10 |
+| fedora:37 | python | Python 3.11.3 |
+| fedora:38 | python | Python 3.11.2 |
+| fedora:39 | python | Python 3.11.3 |
+| oraclelinux:7 | python | Python 2.7.5 |
+| oraclelinux:8 | python39 | Python 3.9.13 |
+| oraclelinux:9 | python39 | Python 3.9.14 |
+| ubuntu:bionic | python3 | Python 3.6.9 |
+| ubuntu:focal | python3 | Python 3.8.10 |
+| ubuntu:jammy | python3 | Python 3.10.6 |
+| ubuntu:kinetic | python3 | Python 3.10.7 |
+| ubuntu:lunar | python3 | Python 3.11.2 |
+
 
 ## License
 
