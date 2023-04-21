@@ -125,7 +125,7 @@ jobs:
           echo "| ${{ matrix.from }} | ${{ matrix.python }} | $(cat version.txt) |" > line${{ matrix.tag }}.txt
 
       -
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: python-versions.zip
           path: line${{ matrix.tag }}.txt
