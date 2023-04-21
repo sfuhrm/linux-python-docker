@@ -21,6 +21,21 @@ jobs:
           - from: debian:bookworm
             tag: debian-bookworm
             file: Dockerfile-debian
+          - from: ubuntu:bionic
+            tag: ubuntu-bionic
+            file: Dockerfile-debian
+          - from: ubuntu:focal
+            tag: ubuntu-focal
+            file: Dockerfile-debian
+          - from: ubuntu:jammy
+            tag: ubuntu-jammy
+            file: Dockerfile-debian
+          - from: ubuntu:kinetic
+            tag: ubuntu-kinetic
+            file: Dockerfile-debian
+          - from: ubuntu:lunar
+            tag: ubuntu-lunar
+            file: Dockerfile-debian
     runs-on: ubuntu-latest
     steps:
 
