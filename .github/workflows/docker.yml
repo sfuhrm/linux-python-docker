@@ -7,6 +7,12 @@ on:
 jobs:
   docker:
     strategy:
+      # Matrix params:
+      #
+      # from: The parent image to use in Dockerfile
+      # tag: The tag to write with to Docker hub
+      # file: The base Dockerfile to use
+      # python: The name of the Python package in the Linux distro
       matrix:
         include:
           - from: debian:stretch
@@ -72,7 +78,7 @@ jobs:
           - from: oraclelinux:7
             tag: oraclelinux-7
             file: Dockerfile-redhat
-            python: python39
+            python: python
     runs-on: ubuntu-latest
     steps:
 
