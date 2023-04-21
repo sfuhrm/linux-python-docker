@@ -95,7 +95,7 @@ jobs:
             tag: oraclelinux-7
             file: Dockerfile-redhat
             package: python
-            exec: python
+            exec: python 2>&1
     runs-on: ubuntu-latest
     steps:
 
@@ -122,7 +122,7 @@ jobs:
       -
         run: |
           docker run stephanfuhrmannionos/linux-python-docker:${{ matrix.tag }} ${{ matrix.exec }} --version > version.txt
-          echo "| ${{ matrix.from }} | ${{ matrix.package }} | $(cat version.txt) |" > line${{ matrix.tag }}.txt
+          echo "| ${{ matrix.tag }} | ${{ matrix.from }} | ${{ matrix.package }} | $(cat version.txt) |" > line${{ matrix.tag }}.txt
 
       -
         uses: actions/upload-artifact@v3
