@@ -36,5 +36,5 @@ jobs:
         with:
           file: "${{ matrix.file }}"
           push: true
-          build-args: "FROM: ${{ matrix.from }}"
+          build-args: "FROM=${{ matrix.from }}"
           tags: stephanfuhrmannionos/linux-python-docker:${{ matrix.tag }}
