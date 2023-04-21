@@ -12,73 +12,90 @@ jobs:
       # from: The parent image to use in Dockerfile
       # tag: The tag to write with to Docker hub
       # file: The base Dockerfile to use
-      # python: The name of the Python package in the Linux distro
+      # package: The name of the Python package in the Linux distro
+      # exec: The name of the Python executable in the Linux distro
       matrix:
         include:
           - from: debian:stretch
             tag: debian-stretch
             file: Dockerfile-debian
-            python: python3
+            package: python3
+            exec: python3
           - from: debian:buster
             tag: debian-buster
             file: Dockerfile-debian
-            python: python3
+            package: python3
+            exec: python3
           - from: debian:bullseye
             tag: debian-bullseye
             file: Dockerfile-debian
-            python: python3
+            package: python3
+            exec: python3
           - from: debian:bookworm
             tag: debian-bookworm
             file: Dockerfile-debian
-            python: python3
+            package: python3
+            exec: python3
           - from: ubuntu:bionic
             tag: ubuntu-bionic
             file: Dockerfile-debian
-            python: python3
+            package: python3
+            exec: python3
           - from: ubuntu:focal
             tag: ubuntu-focal
             file: Dockerfile-debian
-            python: python3
+            package: python3
+            exec: python3
           - from: ubuntu:jammy
             tag: ubuntu-jammy
             file: Dockerfile-debian
-            python: python3
+            package: python3
+            exec: python3
           - from: ubuntu:kinetic
             tag: ubuntu-kinetic
             file: Dockerfile-debian
-            python: python3
+            package: python3
+            exec: python3
           - from: ubuntu:lunar
             tag: ubuntu-lunar
             file: Dockerfile-debian
-            python: python3
+            package: python3
+            exec: python3
           - from: fedora:36
             tag: fedora-36
             file: Dockerfile-redhat
-            python: python
+            package: python
+            exec: python3
           - from: fedora:37
             tag: fedora-37
             file: Dockerfile-redhat
-            python: python
+            package: python
+            exec: python3
           - from: fedora:38
             tag: fedora-38
             file: Dockerfile-redhat
-            python: python
+            package: python
+            exec: python3
           - from: fedora:39
             tag: fedora-39
             file: Dockerfile-redhat
-            python: python
+            package: python
+            exec: python3
           - from: oraclelinux:9
             tag: oraclelinux-9
             file: Dockerfile-redhat
-            python: python39
+            package: python39
+            exec: python3
           - from: oraclelinux:8
             tag: oraclelinux-8
             file: Dockerfile-redhat
-            python: python39
+            package: python39
+            exec: python3
           - from: oraclelinux:7
             tag: oraclelinux-7
             file: Dockerfile-redhat
-            python: python
+            package: python
+            exec: python
     runs-on: ubuntu-latest
     steps:
 
@@ -104,7 +121,7 @@ jobs:
 
       -
         run: |
-          docker run stephanfuhrmannionos/linux-python-docker:${{ matrix.tag }} python3 --version > version.txt
+          docker run stephanfuhrmannionos/linux-python-docker:${{ matrix.tag }} ${{ matrix.exec }} --version > version.txt
           echo "| ${{ matrix.from }} | ${{ matrix.python }} | $(cat version.txt) |" > line${{ matrix.tag }}.txt
 
       -
