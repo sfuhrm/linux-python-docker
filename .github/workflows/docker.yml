@@ -103,4 +103,4 @@ jobs:
           tags: stephanfuhrmannionos/linux-python-docker:${{ matrix.tag }}
 
       -
-        run: docker run stephanfuhrmannionos/linux-python-docker:${{ matrix.tag }} python --version
+        run: docker run stephanfuhrmannionos/linux-python-docker:${{ matrix.tag }} python3 --version
