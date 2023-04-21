@@ -1,4 +1,8 @@
 ARG FROM
 FROM docker.io/$FROM
 ARG PYTHON
-RUN apt-get update && apt-get install --yes $PYTHON
+RUN apt-get update && \
+  apt-get install --yes $PYTHON && \
+  apt-get remove -y wget && \
+  apt-get autoremove -y && \
+  rm -rf /var/lib/apt/lists/* /var/cache/apt && \
