@@ -9,9 +9,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - from: debian:jessie
-            tag: debian-jessie
-            file: Dockerfile-debian
           - from: debian:stretch
             tag: debian-stretch
             file: Dockerfile-debian
