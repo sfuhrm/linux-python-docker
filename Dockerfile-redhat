@@ -1,4 +1,6 @@
 ARG FROM
 FROM docker.io/$FROM
 ARG PYTHON
-RUN yum install -y $PYTHON
+RUN yum install -y $PYTHON && \
+    yum clean packages && \
+    yum clean all
