@@ -1,4 +1,4 @@
-# Linux Python Docker Container
+# Linux Python Docker Image
 
 [![Docker](https://github.com/sfuhrm/linux-python-docker/actions/workflows/docker.yml/badge.svg)](https://github.com/sfuhrm/linux-python-docker/actions/workflows/docker.yml)
 ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/stephanfuhrmannionos/linux-python-docker)
