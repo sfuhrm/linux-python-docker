@@ -1,3 +1,4 @@
 ARG FROM
 FROM docker.io/$FROM
-RUN apt-get update && apt-get install --yes python3
+ARG PYTHON
+RUN apt-get update && apt-get install --yes $PYTHON

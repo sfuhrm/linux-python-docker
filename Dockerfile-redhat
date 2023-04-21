@@ -1,3 +1,4 @@
 ARG FROM
 FROM docker.io/$FROM
-RUN yum install -y python
+ARG PYTHON
+RUN yum install -y $PYTHON

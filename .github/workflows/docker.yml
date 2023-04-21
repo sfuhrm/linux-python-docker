@@ -12,54 +12,71 @@ jobs:
           - from: debian:stretch
             tag: debian-stretch
             file: Dockerfile-debian
+            python: python3
           - from: debian:buster
             tag: debian-buster
             file: Dockerfile-debian
+            python: python3
           - from: debian:bullseye
             tag: debian-bullseye
             file: Dockerfile-debian
+            python: python3
           - from: debian:bookworm
             tag: debian-bookworm
             file: Dockerfile-debian
+            python: python3
           - from: ubuntu:bionic
             tag: ubuntu-bionic
             file: Dockerfile-debian
+            python: python3
           - from: ubuntu:focal
             tag: ubuntu-focal
             file: Dockerfile-debian
+            python: python3
           - from: ubuntu:jammy
             tag: ubuntu-jammy
             file: Dockerfile-debian
+            python: python3
           - from: ubuntu:kinetic
             tag: ubuntu-kinetic
             file: Dockerfile-debian
+            python: python3
           - from: ubuntu:lunar
             tag: ubuntu-lunar
             file: Dockerfile-debian
+            python: python3
           - from: fedora:36
             tag: fedora-36
             file: Dockerfile-redhat
+            python: python
           - from: fedora:37
             tag: fedora-37
             file: Dockerfile-redhat
+            python: python
           - from: fedora:38
             tag: fedora-38
             file: Dockerfile-redhat
+            python: python
           - from: fedora:39
             tag: fedora-39
             file: Dockerfile-redhat
+            python: python
           - from: oraclelinux:9
             tag: oraclelinux-9
             file: Dockerfile-redhat
+            python: python39
           - from: oraclelinux:8
             tag: oraclelinux-8
             file: Dockerfile-redhat
+            python: python39
           - from: oraclelinux:7
             tag: oraclelinux-7
             file: Dockerfile-redhat
+            python: python39
           - from: oraclelinux:6
             tag: oraclelinux-6
             file: Dockerfile-redhat
+            python: python39
     runs-on: ubuntu-latest
     steps:
 
@@ -78,5 +95,5 @@ jobs:
         with:
           file: "${{ matrix.file }}"
           push: true
-          build-args: "FROM=${{ matrix.from }}"
+          build-args: "FROM=${{ matrix.from }},PYTHON=${{ matrix.python }}"
           tags: stephanfuhrmannionos/linux-python-docker:${{ matrix.tag }}
