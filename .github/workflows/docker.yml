@@ -105,10 +105,10 @@ jobs:
       -
         run: |
           docker run stephanfuhrmannionos/linux-python-docker:${{ matrix.tag }} python3 --version > version.txt
-          echo "| ${{ matrix.from }} | ${{ matrix.python }} | $(cat version.txt) |" > line${{ matrix.from }}.txt
+          echo "| ${{ matrix.from }} | ${{ matrix.python }} | $(cat version.txt) |" > line${{ matrix.tag }}.txt
 
       -
         uses: actions/upload-artifact@v2
         with:
           name: python-versions.zip
-          path: line${{ matrix.from }}.txt
+          path: line${{ matrix.tag }}.txt
