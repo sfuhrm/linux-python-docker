@@ -121,8 +121,8 @@ jobs:
 
       -
         run: |
-          docker run stephanfuhrmannionos/linux-python-docker:${{ matrix.tag }} ${{ matrix.exec }} --version > version.txt
-          echo "| ${{ matrix.tag }} | ${{ matrix.from }} | ${{ matrix.package }} | $(cat version.txt) |" 2>&1 | grep Python > line${{ matrix.tag }}.txt
+          docker run stephanfuhrmannionos/linux-python-docker:${{ matrix.tag }} ${{ matrix.exec }} --version 2>&1 | grep Python > version.txt
+          echo "| ${{ matrix.tag }} | ${{ matrix.from }} | ${{ matrix.package }} | $(cat version.txt) |" > line${{ matrix.tag }}.txt
 
       -
         uses: actions/upload-artifact@v3
