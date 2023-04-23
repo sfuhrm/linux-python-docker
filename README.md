@@ -8,6 +8,11 @@ Github actions build infrastructure to matrix-build
 several versions of Linux Distributions
 with their default Python interpreter.
 
+## Where you can find more
+
+* The github repository [linux-python-docker](https://github.com/sfuhrm/linux-python-docker).
+* The Docker image repository [stephanfuhrmannionos/linux-python-docker](https://hub.docker.com/r/stephanfuhrmannionos/linux-python-docker).
+
 ## Motivation for the repository
 
 The repository exists to test-drive Ansible Molecule without
