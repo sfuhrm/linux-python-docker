@@ -3,7 +3,9 @@ name: Docker
 on:
   push:
     branches: [ master ]
-
+  # 12:55 on Monday
+  schedule:
+  - cron: '55 12 * * 1'
 jobs:
   docker:
     strategy:
