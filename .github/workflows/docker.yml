@@ -18,11 +18,6 @@ jobs:
       # exec: The name of the Python executable in the Linux distro
       matrix:
         include:
-          - from: debian:stretch
-            tag: debian-stretch
-            file: Dockerfile-debian
-            package: python3
-            exec: python3
           - from: debian:buster
             tag: debian-buster
             file: Dockerfile-debian
